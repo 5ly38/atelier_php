@@ -38,3 +38,32 @@ for (count($tab5));
         echo $tab5[$i] . "\n";
 endfor;
 */
+
+
+$tabAsso = [ 
+            "dracula"=>"copola",
+            "Apocalypse"=>"copola"];
+
+//ou
+
+$tab["darcula"] = "copola";
+
+var_dump ( array_keys($tab) );
+
+
+$pays = ["jamaique"=>"kingston", "madagascar"=>"Antananarivo", "luxembourg"=>"luxembourg"];
+var_dump ($pays);
+
+echo "\n"."liste des pays triés"."\n";
+$paysTries=array_keys($pays);
+sort($paysTries);
+var_dump($paysTries);
+
+echo "\n"."Liste des capitales"."\n";
+$capitalesAll=array_values($pays);
+var_dump($capitalesAll);
+
+
+echo "\n"."pays avec nom de capitale different"."\n";
+$paysDiffCapitales = array_diff(array_keys($pays),$capitalesAll);
+var_dump($paysDiffCapitales);
